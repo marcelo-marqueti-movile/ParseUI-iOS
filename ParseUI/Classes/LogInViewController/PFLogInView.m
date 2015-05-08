@@ -31,7 +31,7 @@
 #import "PFTextButton.h"
 #import "PFTextField.h"
 
-static NSString *const PFLogInViewDefaultLogoImageName = @"parse_logo.png";
+static NSString *const PFLogInViewDefaultLogoImageName = @"resolve_logo.png";
 static NSString *const PFLogInViewDefaultFacebookButtonImageName = @"facebook_icon.png";
 static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon.png";
 
@@ -43,7 +43,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 + (PFActionButtonConfiguration *)_defaultSignUpButtonConfiguration {
     PFActionButtonConfiguration *configuration = [[PFActionButtonConfiguration alloc] initWithBackgroundImageColor:[PFColor signupButtonBackgroundColor]
                                                                                                              image:nil];
-    NSString *title = NSLocalizedString(@"Sign Up", @"Sign Up");
+    NSString *title = NSLocalizedString(@"Sign Up", @"Cadastre-se");
     [configuration setTitle:title forButtonStyle:PFActionButtonStyleNormal];
     [configuration setTitle:title forButtonStyle:PFActionButtonStyleWide];
 
@@ -54,9 +54,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     PFActionButtonConfiguration *configuration = [[PFActionButtonConfiguration alloc] initWithBackgroundImageColor:[PFColor facebookButtonBackgroundColor]
                                                                                                              image:[PFImage imageNamed:PFLogInViewDefaultFacebookButtonImageName]];
 
-    [configuration setTitle:NSLocalizedString(@"Facebook", @"Facebook")
+    [configuration setTitle:@"Facebook"
              forButtonStyle:PFActionButtonStyleNormal];
-    [configuration setTitle:NSLocalizedString(@"Log In with Facebook", @"Log In with Facebook")
+    [configuration setTitle:@"Entrar com Facebook"
 
              forButtonStyle:PFActionButtonStyleWide];
 
@@ -69,7 +69,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 
     [configuration setTitle:NSLocalizedString(@"Twitter", @"Twitter")
              forButtonStyle:PFActionButtonStyleNormal];
-    [configuration setTitle:NSLocalizedString(@"Log In with Twitter", @"Log In with Twitter")
+    [configuration setTitle:NSLocalizedString(@"Log In with Twitter", @"Entrar com Twitter")
 
              forButtonStyle:PFActionButtonStyleWide];
 
@@ -111,7 +111,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 
         _passwordField = [[PFTextField alloc] initWithFrame:CGRectZero
                                              separatorStyle:PFTextFieldSeparatorStyleBottom];
-        _passwordField.placeholder = NSLocalizedString(@"Password", @"Password");
+        _passwordField.placeholder = @"Senha";
         _passwordField.secureTextEntry = YES;
         _passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
         _passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -127,14 +127,14 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 
     if (_fields & PFLogInFieldsPasswordForgotten) {
         _passwordForgottenButton = [[PFTextButton alloc] initWithFrame:CGRectZero];
-        [_passwordForgottenButton setTitle:NSLocalizedString(@"Forgot Password?", "Forgot Password?")
+        [_passwordForgottenButton setTitle:@"Esqueceu a senha?"
                                   forState:UIControlStateNormal];
         [self addSubview:_passwordForgottenButton];
     }
 
     if (_fields & PFLogInFieldsLogInButton) {
         _logInButton = [[PFPrimaryButton alloc] initWithBackgroundImageColor:[PFColor loginButtonBackgroundColor]];
-        [_logInButton setTitle:NSLocalizedString(@"Log In", @"Log In") forState:UIControlStateNormal];
+        [_logInButton setTitle:@"Entrar" forState:UIControlStateNormal];
         [self addSubview:_logInButton];
     }
 
@@ -422,8 +422,8 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
         keyboardType = UIKeyboardTypeEmailAddress;
         usernamePlaceholder = NSLocalizedString(@"Email", @"Email");
     }
-
-    _usernameField.placeholder = usernamePlaceholder;
+    // gambi
+    _usernameField.placeholder = @"Email";
     _usernameField.keyboardType = keyboardType;
 }
 

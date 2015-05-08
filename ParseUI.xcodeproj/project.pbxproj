@@ -116,6 +116,7 @@
 		A5375DF534FF03442906BCAC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91892E5A1364B4A9F064902 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		BD1FB4C4DFB833BFFD3E209A /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		BD9AADB41AFD482B000BEE6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD9AADB31AFD482B000BEE6B /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,7 +147,6 @@
 		810D6C2F19F7F379005B3DB2 /* PFProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFProductTableViewController.m; sourceTree = "<group>"; };
 		810D6C3219F7F38B005B3DB2 /* PFPurchaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPurchaseTableViewCell.h; sourceTree = "<group>"; };
 		810D6C3319F7F38B005B3DB2 /* PFPurchaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFPurchaseTableViewCell.m; sourceTree = "<group>"; };
-		811B095A1A0843B9008B3393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ParseUI/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		8129E6001A9CB067006752BC /* ParseUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8129E6081A9CB1BE006752BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8129E6391A9CB320006752BC /* UIDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDemoViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +190,6 @@
 		8185BA7B1A642A8B002815C0 /* PFCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCollectionViewCell.m; sourceTree = "<group>"; };
 		819A4B381A6808EA00D01241 /* SubtitleImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleImageCollectionViewController.h; sourceTree = "<group>"; };
 		819A4B391A6808EA00D01241 /* SubtitleImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleImageCollectionViewController.m; sourceTree = "<group>"; };
-		81B3F26B1AC9EDE000A92677 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ParseUI.strings; sourceTree = "<group>"; };
 		81B3F26D1AC9EE0000A92677 /* PFLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFLocalization.h; sourceTree = "<group>"; };
 		81C5993D1A64346000F574E8 /* SimpleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewController.h; sourceTree = "<group>"; };
 		81C5993E1A64346000F574E8 /* SimpleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewController.m; sourceTree = "<group>"; };
@@ -239,6 +238,10 @@
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B774A7483212431D2C034600 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B91892E5A1364B4A9F064902 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9AADB01AFD46C3000BEE6B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/ParseUI.strings; sourceTree = "<group>"; };
+		BD9AADB21AFD4747000BEE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ParseUI.strings; sourceTree = "<group>"; };
+		BD9AADB31AFD482B000BEE6B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9AADB51AFD4920000BEE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/ParseUI.strings; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* ParseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -390,7 +393,7 @@
 		811B09591A0843AD008B3393 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				811B095A1A0843B9008B3393 /* Info.plist */,
+				BD9AADB31AFD482B000BEE6B /* Info.plist */,
 				81B3F2691AC9EDE000A92677 /* Localization */,
 			);
 			name = Resources;
@@ -852,19 +855,10 @@
 				Japanese,
 				French,
 				German,
-				da,
-				de,
-				es,
-				fr,
-				it,
-				ja,
-				nl,
 				no,
-				sl,
-				sv,
-				tr,
-				en,
 				Base,
+				pt,
+				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* Breakpad */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -912,6 +906,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9AADB41AFD482B000BEE6B /* Info.plist in Resources */,
 				81B3F26C1AC9EDE000A92677 /* ParseUI.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1153,7 +1148,9 @@
 		81B3F26A1AC9EDE000A92677 /* ParseUI.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				81B3F26B1AC9EDE000A92677 /* en */,
+				BD9AADB01AFD46C3000BEE6B /* pt */,
+				BD9AADB21AFD4747000BEE6B /* en */,
+				BD9AADB51AFD4920000BEE6B /* Base */,
 			);
 			name = ParseUI.strings;
 			sourceTree = "<group>";
