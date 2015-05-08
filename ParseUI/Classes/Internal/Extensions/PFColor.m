@@ -27,9 +27,9 @@
 #pragma mark Common
 
 + (UIColor *)commonBackgroundColor {
-    return [UIColor colorWithRed:249/255.0f
-                           green:251.0f/255.0f
-                            blue:1.0f
+    return [UIColor colorWithRed:255/255.0f
+                           green:255.0f/255.0f
+                            blue:255.0f
                            alpha:1.0f];
 }
 
@@ -49,23 +49,34 @@
 }
 
 + (UIColor *)textFieldSeparatorColor {
-    return [UIColor colorWithWhite:227.0f/255.0f alpha:1.0f];
+//    return [UIColor colorWithWhite:227.0f/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:164.0f/255.0f
+                           green:69.f/255.0f
+                            blue:239.0f/255.0f
+                           alpha:0.4f];
 }
 
 #pragma mark -
 #pragma mark Buttons
 
 + (UIColor *)loginButtonBackgroundColor {
-    return [UIColor colorWithRed:97.0f/255.0f
-                           green:106.f/255.0f
-                            blue:116.0f/255.0f
+    return [UIColor colorWithRed:163.0f/255.0f
+                           green:77.f/255.0f
+                            blue:236.0f/255.0f
                            alpha:1.0f];
 }
 
 + (UIColor *)signupButtonBackgroundColor {
-    return [UIColor colorWithRed:108.0f/255.0f
-                           green:150.0f/255.0f
-                            blue:249.0f/255.0f
+    return [UIColor colorWithRed:255.0f/255.0f
+                           green:255.f/255.0f
+                            blue:255.0f/255.0f
+                           alpha:1.0f];
+}
+
++ (UIColor *)signupButtonInsideBackgroundColor {
+    return [UIColor colorWithRed:163.0f/255.0f
+                           green:77.f/255.0f
+                            blue:236.0f/255.0f
                            alpha:1.0f];
 }
 

@@ -267,8 +267,7 @@ static NSString *const PFSignUpViewControllerDelegateInfoAdditionalKey = @"addit
     }
 
     if ([password length] < _minPasswordLength) {
-        NSString *errorMessage = NSLocalizedString(@"Password must be at least %d characters.",
-                                                   @"Password too short error message in PFSignUpViewController");
+        NSString *errorMessage = @"Senha precisa ter %d letras.";
         errorMessage = [NSString stringWithFormat:errorMessage, (unsigned long)_minPasswordLength];
         NSError *error = [NSError errorWithDomain:PFParseErrorDomain
                                              code:0
@@ -322,7 +321,7 @@ static NSString *const PFSignUpViewControllerDelegateInfoAdditionalKey = @"addit
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:PFSignUpFailureNotification object:self];
 
-    NSString *title = NSLocalizedString(@"Sign Up Error", @"Sign Up Error");
+    NSString *title = @"Erro com o cadastro.";
 
     if ([[error domain] isEqualToString:PFParseErrorDomain]) {
         NSInteger errorCode = [error code];
@@ -330,32 +329,26 @@ static NSString *const PFSignUpViewControllerDelegateInfoAdditionalKey = @"addit
         UIResponder *responder = nil;
 
         if (errorCode == kPFErrorInvalidEmailAddress) {
-            message = NSLocalizedString(@"The email address is invalid. Please enter a valid email.",
-                                        @"Invalid email address error message in PFSignUpViewControllers");
+            message = @"Email inválido.";
             responder = _signUpView.emailField ?: _signUpView.usernameField;
         } else if (errorCode == kPFErrorUsernameMissing) {
-            message = NSLocalizedString(@"Please enter a username.",
-                                        @"Username missing error message in PFSignUpViewController");
+            message = @"Insira um email.";
             responder = _signUpView.usernameField;
         } else if (errorCode == kPFErrorUserPasswordMissing) {
-            message = NSLocalizedString(@"Please enter a password.",
-                                        @"Password missing error message in PFSignUpViewController");
+            message = @"Insira uma senha.";
             responder = _signUpView.passwordField;
         } else if (errorCode == kPFErrorUsernameTaken) {
-            NSString *format = NSLocalizedString(@"The username '%@' is taken. Please try choosing a different username.",
-                                                 @"Username taken error format in PFSignUpViewController");
+            NSString *format = @"O usuário '%@' já está sendo utilizado.";
             message = [NSString stringWithFormat:format, _signUpView.usernameField.text];
             responder = _signUpView.usernameField;
         } else if (error.code == kPFErrorUserEmailTaken) {
-            NSString *format = NSLocalizedString(@"The email '%@' is taken. Please try using a different email.",
-                                                 @"Email is taken error format in PFSignUpViewController.");
+            NSString *format = @"O usuário '%@' já está sendo utilizado.";
             UITextField *textField = self.emailAsUsername ? _signUpView.usernameField : _signUpView.emailField;
 
             message = [NSString stringWithFormat:format, textField.text];
             responder = textField;
         } else if (error.code == kPFErrorUserEmailMissing) {
-            message = NSLocalizedString(@"Please enter an email.",
-                                        @"Email missing error message in PFSignUpViewController");
+            message = @"Insira um email.";
             responder = _signUpView.emailField;
         }
 

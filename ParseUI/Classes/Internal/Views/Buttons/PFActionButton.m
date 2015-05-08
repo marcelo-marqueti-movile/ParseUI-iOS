@@ -23,6 +23,7 @@
 
 #import "PFImage.h"
 #import "PFRect.h"
+#import <QuartzCore/QuartzCore.h>
 
 static const UIEdgeInsets PFActionButtonContentEdgeInsets = { .top = 0.0f, .left = 12.0f, .bottom = 0.0f, .right = 0.0f };
 
@@ -58,6 +59,17 @@ static const UIEdgeInsets PFActionButtonContentEdgeInsets = { .top = 0.0f, .left
     [self setBackgroundImage:backgroundImage forState:UIControlStateNormal];
 
     [self setImage:configuration.image forState:UIControlStateNormal];
+    
+    [self setTitleColor:[UIColor colorWithRed:163.0f/255.0f
+                                        green:77.f/255.0f
+                                         blue:236.0f/255.0f
+                                        alpha:1.0f] forState:UIControlStateNormal];
+    [[self layer] setBorderWidth:1.0f];
+    [[self layer] setBorderColor:[UIColor colorWithRed:163.0f/255.0f
+                                                 green:77.f/255.0f
+                                                  blue:236.0f/255.0f
+                                                 alpha:1.0f].CGColor];
+    [[self layer] setCornerRadius:4.0f];
 
     [self setTitle:[configuration titleForButtonStyle:buttonStyle]
           forState:UIControlStateNormal];

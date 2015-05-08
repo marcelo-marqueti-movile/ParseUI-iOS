@@ -44,6 +44,7 @@
 
 + (UIColor *)loginButtonBackgroundColor;
 + (UIColor *)signupButtonBackgroundColor;
++ (UIColor *)signupButtonInsideBackgroundColor;
 + (UIColor *)facebookButtonBackgroundColor;
 + (UIColor *)twitterButtonBackgroundColor;
 

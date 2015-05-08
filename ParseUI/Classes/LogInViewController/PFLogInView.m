@@ -43,7 +43,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 + (PFActionButtonConfiguration *)_defaultSignUpButtonConfiguration {
     PFActionButtonConfiguration *configuration = [[PFActionButtonConfiguration alloc] initWithBackgroundImageColor:[PFColor signupButtonBackgroundColor]
                                                                                                              image:nil];
-    NSString *title = @"Cadastre-se";
+    NSString *title = @"Quero me cadastrar";
     [configuration setTitle:title forButtonStyle:PFActionButtonStyleNormal];
     [configuration setTitle:title forButtonStyle:PFActionButtonStyleWide];
 
