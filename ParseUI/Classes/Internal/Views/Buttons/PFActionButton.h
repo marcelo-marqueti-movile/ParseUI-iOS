@@ -56,8 +56,9 @@ typedef NS_ENUM(uint8_t, PFActionButtonStyle)
 @property (nonatomic, strong, readonly) UIColor *backgroundImageColor;
 @property (nonatomic, strong, readonly) UIImage *image;
 
-- (instancetype)initWithBackgroundImageColor:(UIColor *)backgroundImageColor
-                                       image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithBackgroundImageColor:(UIColor *)backgroundImageColor 
+                                       image:(UIImage *)image
+                                       NS_DESIGNATED_INITIALIZER;
 
 - (void)setTitle:(NSString *)title forButtonStyle:(PFActionButtonStyle)style;
 - (NSString *)titleForButtonStyle:(PFActionButtonStyle)style;

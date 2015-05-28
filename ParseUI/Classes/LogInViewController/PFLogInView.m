@@ -135,6 +135,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     if (_fields & PFLogInFieldsLogInButton) {
         _logInButton = [[PFPrimaryButton alloc] initWithBackgroundImageColor:[PFColor loginButtonBackgroundColor]];
         [_logInButton setTitle:@"Entrar" forState:UIControlStateNormal];
+        [_logInButton setTitleColor:[PFColor resolveColor] forState:UIControlStateNormal];
         [self addSubview:_logInButton];
     }
 
@@ -248,17 +249,18 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     CGFloat currentY = CGRectGetMinY(loginContentRect);
 
     if (_logo) {
+//        CGFloat logoTopInset = 36.0f;
         CGFloat logoTopInset = (CGRectGetMinX(contentRect) > 0.0f ? 36.0f : 88.0f) * contentSizeScale.height;
         CGFloat logoBottomInset = floorf(36.0f * contentSizeScale.height);
 
         CGFloat logoAvailableHeight = floorf(68.0f * contentSizeScale.height);
 
         CGSize logoSize = [_logo sizeThatFits:CGSizeMake(loginContentSize.width, logoAvailableHeight)];
-        logoSize.width = MIN(loginContentSize.width, logoSize.width);
-        logoSize.height = MIN(logoAvailableHeight, logoSize.height);
+        logoSize.width = MAX(loginContentSize.width, logoSize.width);
+        logoSize.height = MAX(logoAvailableHeight, logoSize.height);
 
         CGRect frame = PFRectMakeWithSizeCenteredInRect(logoSize, loginContentRect);
-        frame.origin.y = CGRectGetMinY(loginContentRect) + logoTopInset;
+        frame.origin.y = CGRectGetMinY(loginContentRect) + 1;
         _logo.frame = CGRectIntegral(frame);
 
         currentY = floorf(CGRectGetMaxY(frame) + logoBottomInset);

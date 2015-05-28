@@ -60,9 +60,9 @@ static const UIEdgeInsets PFActionButtonContentEdgeInsets = { .top = 0.0f, .left
 
     [self setImage:configuration.image forState:UIControlStateNormal];
     
-    [self setTitleColor:[UIColor colorWithRed:163.0f/255.0f
-                                        green:77.f/255.0f
-                                         blue:236.0f/255.0f
+    [self setTitleColor:[UIColor colorWithRed:255.0f/255.0f
+                                        green:255.f/255.0f
+                                         blue:255.0f/255.0f
                                         alpha:1.0f] forState:UIControlStateNormal];
     [[self layer] setBorderWidth:1.0f];
     [[self layer] setBorderColor:[UIColor colorWithRed:163.0f/255.0f
@@ -89,7 +89,8 @@ static const UIEdgeInsets PFActionButtonContentEdgeInsets = { .top = 0.0f, .left
 
 - (CGSize)sizeThatFits:(CGSize)boundingSize {
     CGSize size = CGSizeZero;
-    size.width = MAX([super sizeThatFits:boundingSize].width, boundingSize.width);
+//    size.width = (MAX([super sizeThatFits:boundingSize].width, boundingSize.width)-60);
+    size.width = 210;
     size.height = MIN(44.0f, boundingSize.height);
     return size;
 }

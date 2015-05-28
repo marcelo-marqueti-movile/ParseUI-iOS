@@ -103,7 +103,8 @@ static NSString *const PFSignUpViewDefaultLogoImageName = @"resolve_logo.png";
     }
 
     if (_fields & PFSignUpFieldsSignUpButton) {
-        _signUpButton = [[PFPrimaryButton alloc] initWithBackgroundImageColor:[PFColor signupButtonInsideBackgroundColor]];
+        _signUpButton = [[PFPrimaryButton alloc] initWithBackgroundImageColor:[PFColor whiteColor]];
+        [_signUpButton setTitleColor:[PFColor resolveColor] forState:UIControlStateNormal];
         [_signUpButton setTitle:@"Cadastrar" forState:UIControlStateNormal];
         [self addSubview:_signUpButton];
     }
@@ -146,8 +147,8 @@ static NSString *const PFSignUpViewDefaultLogoImageName = @"resolve_logo.png";
         CGFloat logoAvailableHeight = floorf(68.0f * contentSizeScale.height);
 
         CGSize logoSize = [_logo sizeThatFits:CGSizeMake(contentSize.width, logoAvailableHeight)];
-        logoSize.width = MIN(contentSize.width, logoSize.width);
-        logoSize.height = MIN(logoAvailableHeight, logoSize.height);
+        logoSize.width = MAX(contentSize.width, logoSize.width);
+        logoSize.height = MAX(logoAvailableHeight, logoSize.height);
 
         CGRect frame = PFRectMakeWithSizeCenteredInRect(logoSize, contentRect);
         frame.origin.y = CGRectGetMinY(contentRect) + logoTopInset;

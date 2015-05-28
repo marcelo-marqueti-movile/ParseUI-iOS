@@ -42,6 +42,7 @@
 /// @name Buttons
 ///--------------------------------------
 
++ (UIColor *)resolveColor;
 + (UIColor *)loginButtonBackgroundColor;
 + (UIColor *)signupButtonBackgroundColor;
 + (UIColor *)signupButtonInsideBackgroundColor;
